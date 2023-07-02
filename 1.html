@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Task_1</title>
+</head>
+
+<body>
+
+    <script>
+        const cartoon = document.createElement('div');
+        cartoon.classList.add('cartoon');
+
+        const cartoonTitle = document.createElement('h1');
+        cartoonTitle.classList.add('cartoon__title');
+        cartoonTitle.textContent = 'Ёжик в тумане';
+
+        const cartoonDescription = document.createElement('p');
+        cartoonDescription.classList.add('cartoon__description');
+        cartoonDescription.innerHTML = `«Ёжик в тумане» - советский мультипликационный фильм, снятый Юрием Норштейном в 1975 году
+на студии «Союзмультфильм». Фильм рассказывает о Ёжике, который по дороге через темный лес в гости к Медвежонку,
+заблудившись в тумане, попадает в загадочный мир, где обитают разные сказочные персонажи.`;
+
+        const cartoonCharacter = document.createElement('div');
+        cartoonCharacter.classList.add('cartoon__character');
+
+        const characterImg = document.createElement('img');
+        characterImg.classList.add('character__img');
+        characterImg.setAttribute('alt', 'Ёжика не видно')
+        characterImg.src = 'https://sun9-23.userapi.com/c626126/v626126945/1cc46/n03DpVZYJlw.jpg?ava=1';
+
+        const characterName = document.createElement('h3');
+        characterName.classList.add('character__name');
+        characterName.textContent = 'Ёжик';
+
+        cartoon.append(cartoonTitle);
+        cartoon.append(cartoonDescription);
+        cartoon.append(cartoonCharacter);
+        cartoonCharacter.append(characterImg);
+        cartoonCharacter.append(characterName);
+
+        document.body.append(cartoon);
+
+    </script>
+
+</body>
+
+</html>
