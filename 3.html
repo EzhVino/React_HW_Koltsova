@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Task_3</title>
+</head>
+
+<body>
+
+
+    <script crossorigin src="https://unpkg.com/react@18.2.0/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18.2.0/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone@7.9.3/babel.js"></script>
+
+    <script type="text/babel">
+
+        const root = document.createElement('div');
+        document.body.prepend(root);
+
+        const cartoonCharacter = <div className='cartoon__character'>
+            <img
+                className='character__img'
+                src='https://sun9-23.userapi.com/c626126/v626126945/1cc46/n03DpVZYJlw.jpg?ava=1'
+                alt='Ёжика не видно'
+            />
+            <h3 className='character__name' >Ёжик</h3>
+        </div>
+
+        const cartoon = <div className='cartoon'>
+            <h1 className='cartoon__title'>Ёжик в тумане</h1>
+            <p className='cartoon__description'>
+                «Ёжик в тумане» - советский мультипликационный фильм, снятый Юрием Норштейном в 1975 году
+                на студии «Союзмультфильм». Фильм рассказывает о Ёжике, который по дороге через темный лес в гости к Медвежонку,
+                заблудившись в тумане, попадает в загадочный мир, где обитают разные сказочные персонажи.
+            </p>
+            {cartoonCharacter}
+        </div>
+
+        const rootElement = ReactDOM.createRoot(root);
+        rootElement.render(cartoon);
+
+    </script>
+</body>
+
+</html>
